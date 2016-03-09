@@ -1,0 +1,14 @@
+<%= form_for(@test) do |f| %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :sex %><br>
+      <%= f.number_field :sex %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
