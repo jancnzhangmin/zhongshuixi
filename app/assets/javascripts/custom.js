@@ -494,7 +494,7 @@ jQuery(document).ready(function () {
 			if (jQuery(this).scrollTop() > 100) {
 				jQuery('.scrollup').fadeIn();
 			} else {
-				jQuery('.scrollup').fadeOut();
+				jQuery('.scrollup').fadeIn();
 			}
 		});
 	
