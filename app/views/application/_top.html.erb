@@ -4,9 +4,10 @@
   <div class="top-bar">
     <div class="slidedown collapse">
       <div class="container">
-        <div class="phone-email pull-left">
-          <a><i class="icon-phone"></i> 电话 : <%= @config.title %></a>
-          <a href="mail%40example.html"><i class="icon-envelope"></i> Email : mail@example.com</a>
+        <div class="phone-email pull-right">
+          <i class="icon-phone"></i> 电话 : <%= public_config.tel %>&nbsp;
+          <i class="icon-envelope"></i> Email : <%= public_config.mail %>&nbsp;
+          <i class="icon-comments"></i>QQ: <%= public_config.qq %>
         </div>
 
       </div>
@@ -26,9 +27,10 @@
       <!-- Logo Start -->
       <div class="logo pull-left">
         <h1>
-          <a href="#">
-            <img src="img/logo.png" alt="pixma" width="125" height="60">
-          </a>
+
+
+          <%= image_tag public_config.logo.url,height:60 %>
+
         </h1>
       </div>
       <!-- Logo End -->

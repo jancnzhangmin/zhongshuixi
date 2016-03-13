@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require kindeditor
 //= require turbolinks
+
 
 //= require bootstrap.js
 //= require jquery.parallax.js
@@ -31,3 +33,4 @@
 //= require switcher.js
 //= require jquery.gmap.min.js
 //= require custom.js
+

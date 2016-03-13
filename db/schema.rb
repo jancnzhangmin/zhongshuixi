@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309020110) do
+ActiveRecord::Schema.define(version: 20160313075116) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username",        limit: 255
@@ -22,14 +22,55 @@ ActiveRecord::Schema.define(version: 20160309020110) do
     t.datetime "updated_at",                  null: false
   end
 
-  create_table "configs", force: :cascade do |t|
+  create_table "clas", force: :cascade do |t|
     t.string   "title",      limit: 255
-    t.string   "tel",        limit: 255
-    t.string   "mail",       limit: 255
-    t.string   "address",    limit: 255
-    t.string   "beian",      limit: 255
+    t.string   "keyword",    limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "configs", force: :cascade do |t|
+    t.string   "title",             limit: 255
+    t.string   "tel",               limit: 255
+    t.string   "mail",              limit: 255
+    t.string   "address",           limit: 255
+    t.string   "beian",             limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "qq",                limit: 255
+    t.string   "logo_file_name",    limit: 255
+    t.string   "logo_content_type", limit: 255
+    t.integer  "logo_file_size",    limit: 4
+    t.datetime "logo_updated_at"
+  end
+
+  create_table "contents", force: :cascade do |t|
+    t.string   "cla_id",             limit: 255
+    t.string   "title",              limit: 255
+    t.text     "content",            limit: 65535
+    t.string   "auther",             limit: 255
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
+  end
+
+  create_table "lists", force: :cascade do |t|
+    t.integer  "cla_id",     limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "sliders", force: :cascade do |t|
+    t.string   "link",               limit: 255
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
   end
 
   create_table "tests", force: :cascade do |t|
