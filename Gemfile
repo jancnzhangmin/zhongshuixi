@@ -2,6 +2,8 @@ source 'https://ruby.taobao.org'
 
 gem 'paperclip'
 gem 'rails_kindeditor'
+gem 'carrierwave'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use mysql as the database for Active Record
