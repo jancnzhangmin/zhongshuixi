@@ -1,8 +1,10 @@
 source 'https://ruby.taobao.org'
 
 gem 'paperclip'
-gem 'rails_kindeditor'
+gem 'rails_kindeditor', github: 'Macrow/rails_kindeditor'
 gem 'carrierwave'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'

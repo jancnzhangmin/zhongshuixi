@@ -7,4 +7,16 @@ module ApplicationHelper
     public_slider=Slider.all
   end
 
+
+
+
+
+
+
+
+
+
 end
+
+
+
