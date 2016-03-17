@@ -1,0 +1,95 @@
+<%= render 'top' %>
+<!-- Title, Breadcrumb Start-->
+<div class="breadcrumb-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+        <h2 class="title">产品介绍</h2>
+      </div>
+      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+        <div class="breadcrumbs pull-right">
+          <ul>
+            <li>你在这里:</li>
+            <li><a href="index-2.html">主页</a></li>
+            <li><a href="#">产品</a></li>
+            <li>产品介绍</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Title, Breadcrumb End-->
+
+
+
+
+
+<!-- Main Content start-->
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
+
+
+
+
+        <article class="post hentry">
+          <div class="post-image">
+            <a href=<%=@product.image.url %> data-rel="prettyPhoto">
+              <span class="img-hover"></span>
+              <span class="fullscreen"><i class="icon-search"></i></span>
+              <img src=<%= @product.image.url %> alt="">
+            </a>
+          </div>
+
+          <header class="post-header">
+            <h3 class="content-title"><%= @product.title %></h3>
+            <div class="blog-entry-meta">
+              <div class="blog-entry-meta-date">
+
+                <span style="font-size: x-large;">sdafs:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="icon-yen icon-2x" style="color: #FF6600;"><%= @product.price %></span>
+              </div>
+
+            </div>
+          </header>
+          <div class="post-content">
+            <p>
+              <%= @product.summary %>
+            </p>
+          </div>
+
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table class="col-xs-12">
+          <tr>
+            <td class="col-xs-1"><h4>详细</h4></td>
+            <td>
+              <div class="blog-divider"></div>
+            </td>
+          </tr>
+        </table>
+
+
+        <div>
+          <%=@product.content.html_safe %>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

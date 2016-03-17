@@ -1,10 +1,34 @@
 
 <script>
-    function claselect()
-    {
 
-        document.getElementById("cla_id").value = document.getElementById("cla_select").value;
-    }
+
+    $(document).ready(function () {
+
+
+        $("#cla_select").click(function(){
+
+        $('#cla_id').val($('#cla_select').val());
+
+        });
+
+
+
+        if($('#cla_id').val()>1)
+        {
+            $('#cla_select').val($('#cla_id').val());
+        }else
+        {
+            $('#cla_id').val('1');
+        }
+
+
+    });
+
+
+
+
+
+
 </script>
 
 <div id="main">
@@ -28,8 +52,8 @@
                     </p>
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                    <%= f.hidden_field :cla_id,class:"form-control",id:"cla_id",value:"1"  %>
-                    <select class="form-control" id="cla_select" onchange="claselect()">
+                    <%= f.hidden_field :cla_id,class:"form-control",id:"cla_id"  %>
+                    <select class="form-control" id="cla_select" >
                       <% @clas.each do |cla| %>
                           <option value=<%= cla.id %> ><%= cla.title %></option>
                       <% end %>
@@ -63,7 +87,29 @@
                   <br>
                   <br>
 
+                  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
+                    <p class="pull-right">
+                      产品价格
+                    </p>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                    <%= f.text_field :price, class:"form-control" %>
+                  </div>
+                  <br>
+                  <br>
 
+
+                  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
+                    <p class="pull-right">
+                      产品介绍
+                    </p>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                    <%= f.text_area :summary,cols:"5", class:"form-control" %>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
 
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
                     <p class="pull-right">

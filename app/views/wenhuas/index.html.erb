@@ -1,0 +1,32 @@
+<%= render 'top' %>
+
+
+
+
+
+<!-- Title, Breadcrumb Start-->
+<div class="breadcrumb-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+        <h2 class="title">About Us</h2>
+      </div>
+      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+        <div class="breadcrumbs pull-right">
+          <ul>
+            <li>You are here:</li>
+            <li><a href="index-2.html">Home</a></li>
+            <li><a href="#">Pages</a></li>
+            <li>About Us</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Title, Breadcrumb End-->
+<div class="content">
+  <div class="container">
+    <%= @content.content.html_safe %>
+  </div>
+</div>
