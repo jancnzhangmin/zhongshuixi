@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
   def show
 
 @product=Content.find(params[:id])
+    @products = Content.all
 
   end
 
