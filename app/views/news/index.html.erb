@@ -1,0 +1,96 @@
+<%= render 'top' %>
+<!-- Title, Breadcrumb Start-->
+<div class="breadcrumb-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+        <h2 class="title">公司新闻</h2>
+      </div>
+      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+        <div class="breadcrumbs pull-right">
+          <ul>
+            <li>你在这里:</li>
+            <li><a href="index-2.html">主页</a></li>
+            <li><a href="#">待定</a></li>
+            <li>新闻</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Title, Breadcrumb End-->
+
+<div class="breadcrumb-wrapper">
+  <div class="container row">
+
+
+      <div class="col-xs-9">
+        <% @news.each do |new| %>
+            <div>
+              <span><%= link_to new.title,new %></span><span class="pull-right"><%= new.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
+            </div>
+        <% end %>
+      </div>
+
+
+  </div>
+
+
+  <div class="col-xs-3 row">
+
+    <% @news2.each do |new| %>
+        <p>
+          <%=new.title %>
+        </p>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <div class="content-box">
+            <div class="content-box-icon">
+              <a href=<%= news_path(new) %>> <%= image_tag new.image %></a>
+            </div>
+            <div class="content-box-info">
+              <h4><%= new.title %><i class="pull-right icon-yen" style="color: #FF6600;">&nbsp;<%= new.price %></i></h4>
+            </div>
+
+
+
+          </div>
+        </div>
+
+    <% end %>
+
+  </div>
+
+
+
+</div>
+<!-- Tab Start -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
