@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318030249) do
+ActiveRecord::Schema.define(version: 20160321091632) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username",        limit: 255
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20160318030249) do
     t.datetime "image_updated_at"
     t.float    "price",              limit: 24
     t.text     "summary",            limit: 65535
+    t.string   "icon",               limit: 255
   end
 
   create_table "kindeditor_assets", force: :cascade do |t|

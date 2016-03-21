@@ -1,0 +1,34 @@
+<div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <!-- Search Widget Start -->
+
+  <!-- Search Widget End -->
+  <!-- Tab Start -->
+  <div class="widget tabs">
+    <div id="horizontal-tabs">
+
+      <div class="contents">
+        <div class="tabscontent" id="content1" style="display: block;">
+          <ul class="posts">
+
+            <% count=0 %>
+            <% @products.each do |product| %>
+                <% if count < 5 %>
+                    <li>
+                      <a href=<%= product_path(product) %>><%= image_tag product.image %></a>
+                      <p><h4><%= product.title %></h4></p>
+                      <span class="color icon-yen" style="color: #FF6600;"><%= product.price %></span>
+                    </li>
+                    <% count = count + 1 %>
+                <% end %>
+            <% end %>
+
+          </ul>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  <!-- Tab End -->
+</div>

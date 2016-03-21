@@ -7,6 +7,9 @@ class TestsController < ApplicationController
     @tests = Test.all
     @configs = Config.all
     @config=@configs.first
+    @mains = Cla.find_by(keyword:"main").contents
+
+
   end
 
   # GET /tests/1
