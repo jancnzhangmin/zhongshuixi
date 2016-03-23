@@ -77,6 +77,6 @@ end
 
 # Never trust parameters from the scary internet, only allow the white list through.
 def config_params
-  params.require(:config).permit(:title, :tel,:mail,:address,:beian, :qq, :logo)
+  params.require(:config).permit(:title, :tel,:mail,:address,:beian, :qq, :logo, :recenttitle, :recentsummary)
 end
 end

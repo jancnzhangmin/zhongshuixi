@@ -8,7 +8,7 @@
 
       <div class="row">
         <div class="col-lg-12 col-md-12">
-          <h3 class="title">Form Elements</h3>
+          <h3 class="title">了解我们</h3>
           <div class="row">
             <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
               <%= form_for(@config,:html => {:multipart => true}) do |f| %>
@@ -89,9 +89,36 @@
                   <br>
                   <br>
 
+
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
                     <p class="pull-right">
-                      logo:
+                      底部标题:
+                    </p>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                    <%= f.text_field :recenttitle,class:"form-control"  %>
+                  </div>
+
+                  <br>
+                  <br>
+
+
+                  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
+                    <p class="pull-right">
+                      底部简介:
+                    </p>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                    <%= f.text_field :recentsummary,class:"form-control"  %>
+                  </div>
+
+                  <br>
+                  <br>
+
+
+                  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
+                    <p class="pull-right">
+                      网站logo:
                     </p>
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
@@ -137,3 +164,4 @@
     </div>
   </div>
 </div>
+<%= render 'footer' %>

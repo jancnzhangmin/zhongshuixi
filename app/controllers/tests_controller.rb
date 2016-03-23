@@ -8,6 +8,7 @@ class TestsController < ApplicationController
     @configs = Config.all
     @config=@configs.first
     @mains = Cla.find_by(keyword:"main").contents
+    @recents = Cla.find_by(keyword:"recent").contents.order('id desc')
 
 
   end
@@ -15,6 +16,17 @@ class TestsController < ApplicationController
   # GET /tests/1
   # GET /tests/1.json
   def show
+    @tests = Test.all
+    @configs = Config.all
+    @config=@configs.first
+
+
+
+
+
+
+
+
   end
 
   # GET /tests/new

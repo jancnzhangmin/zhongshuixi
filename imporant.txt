@@ -1,0 +1,7 @@
+keyword:
+企业文化    wenhua
+产品       product
+新闻 	     news
+主页中部    	main
+主页底部    	recent
+关于我们    	contact

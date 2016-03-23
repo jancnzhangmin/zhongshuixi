@@ -4,8 +4,8 @@
     <div class="row">
       <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 animate_afl d1">
         <div class="portfolio-desc">
-          <h3 class="title">上善若水 心系天下</h3>
-          <p>公司以“细节决定成败，品质成就未来”为经营理念，经过多年发展，公司在即时通讯、VOIP整体解决方案、语音数据处理、企业O2O营销平台搭建，企业管理软件开发，进销存软件开发等领域取得丰硕成果</p>
+          <h3 class="title"><%= @config.recenttitle %></h3>
+          <p><%= @config.recentsummary %></p>
           <div class="carousel-controls">
             <a class="prev" href="#portfolio-carousel" data-slide="prev"><i class="icon-angle-left"></i></a>
             <a class="next" href="#portfolio-carousel" data-slide="next"><i class="icon-angle-right"></i></a>
@@ -13,100 +13,78 @@
           </div>
         </div>
       </div>
+
+
       <div class="col-lg-9 col-md-9 col-xs-12">
         <div class="row">
           <div id="portfolio-carousel" class="portfolio-carousel slide">
+
             <div class="carousel-inner">
+
+
               <div class="item active">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d2">
-                  <div class="portfolio-item">
-                    <a href=<%=url_to_image 'portfolio/portfolio-1.jpg' %> class="portfolio-item-link" data-rel="prettyPhoto" >
-                      <span class="portfolio-item-hover"></span>
-                      <span class="fullscreen"><i class="icon-search"></i></span><%=image_tag 'portfolio/portfolio-1.jpg' %>
-                    </a>
-                    <div class="portfolio-item-title">
-                      <a href="single-project.html">Insta Genius</a>
-                      <p>
-                        Design / Development
-                      </p>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d3">
-                  <div class="portfolio-item">
-                    <a href=<%=url_to_image 'portfolio/portfolio-2.jpg' %> class="portfolio-item-link" data-rel="prettyPhoto" >
-                      <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><%=image_tag 'portfolio/portfolio-2.jpg' %>
-                    </a>
-                    <div class="portfolio-item-title">
-                      <a href="single-project.html">YA Sound</a>
-                      <p>
-                        Sound / Audio
-                      </p>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d4">
-                  <div class="portfolio-item">
-                    <a href=<%=url_to_image 'portfolio/portfolio-3.jpg' %> class="portfolio-item-link" data-rel="prettyPhoto" >
-                      <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><%=image_tag 'portfolio/portfolio-3.jpg' %>
-                    </a>
-                    <div class="portfolio-item-title">
-                      <a href="single-project.html">Nike Shoe</a>
-                      <p>
-                        Apareal / Shoe
-                      </p>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
+
+                <% count=0 %>
+                <% @recents.each do |recent| %>
+                    <% if count <3 %>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d1">
+                          <div class="portfolio-item">
+                            <a href=<%= news_path(recent) %> class="portfolio-item-link"  >
+                              <span class="portfolio-item-hover"></span>
+                              <span class="fullscreen"><i class="icon-search"></i></span><%=image_tag(recent.image.url) %>
+                            </a>
+                            <div class="portfolio-item-title">
+                              <a href=<%= news_path(recent) %>><%= recent.title %></a>
+                              <p>
+                                <%= recent.summary %>
+                              </p>
+                            </div>
+                            <div class="clearfix"></div>
+                          </div>
+                        </div>
+                        <% count=count+1 %>
+                    <% end %>
+
+                <% end %>
+
+
               </div>
+
+
+
               <div class="item">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
-                  <div class="portfolio-item">
-                    <a href="img/portfolio/portfolio-4.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
-                      <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="img/portfolio/portfolio-4.jpg" alt=" "/>
-                    </a>
-                    <div class="portfolio-item-title">
-                      <a href="single-project.html">Camera Icon</a>
-                      <p>
-                        Icon / Device
-                      </p>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
-                  <div class="portfolio-item">
-                    <a href="img/portfolio/portfolio-5.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
-                      <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="img/portfolio/portfolio-5.jpg" alt=" "/>
-                    </a>
-                    <div class="portfolio-item-title">
-                      <a href="single-project.html">Penguin</a>
-                      <p>
-                        Animal / Nature
-                      </p>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
-                  <div class="portfolio-item">
-                    <a href="images/portfolio/portfolio-6.html" class="portfolio-item-link" data-rel="prettyPhoto" >
-                      <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="img/portfolio/portfolio-6.jpg" alt=" "/>
-                    </a>
-                    <div class="portfolio-item-title">
-                      <a href="single-project.html">Sound Box</a>
-                      <p>
-                        Audio / Sound
-                      </p>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
+                <% count=0 %>
+                <% @recents.each do |recent| %>
+                    <% if count >2 %>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item ">
+                          <div class="portfolio-item">
+                            <a href=<%= news_path(recent) %> class="portfolio-item-link"  >
+                              <span class="portfolio-item-hover"></span>
+                              <span class="fullscreen"><i class="icon-search"></i></span><%=image_tag(recent.image.url) %>
+                            </a>
+                            <div class="portfolio-item-title">
+                              <a href=<%= news_path(recent) %>><%= recent.title %></a>
+                              <p>
+                                <%= recent.summary %>
+                              </p>
+
+                            </div>
+                            <div class="clearfix"></div>
+                          </div>
+                        </div>
+
+                    <% end %>
+                    <% count=count+1 %>
+                <% end %>
+
               </div>
+
+
             </div>
+
+
+
+
           </div>
           <div class="clearfix"></div>
         </div>

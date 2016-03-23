@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321091632) do
+ActiveRecord::Schema.define(version: 20160323060547) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username",        limit: 255
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20160321091632) do
     t.integer  "status",          limit: 4
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+  end
+
+  create_table "bottoms", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.string   "bottom",     limit: 255
+    t.text     "introuduce", limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "clas", force: :cascade do |t|
@@ -35,13 +43,15 @@ ActiveRecord::Schema.define(version: 20160321091632) do
     t.string   "mail",              limit: 255
     t.string   "address",           limit: 255
     t.string   "beian",             limit: 255
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "qq",                limit: 255
     t.string   "logo_file_name",    limit: 255
     t.string   "logo_content_type", limit: 255
     t.integer  "logo_file_size",    limit: 4
     t.datetime "logo_updated_at"
+    t.string   "recenttitle",       limit: 255
+    t.text     "recentsummary",     limit: 65535
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -50,6 +60,7 @@ ActiveRecord::Schema.define(version: 20160321091632) do
     t.text     "content",     limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.string   "name",        limit: 255
   end
 
   create_table "contents", force: :cascade do |t|

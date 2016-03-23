@@ -45,28 +45,39 @@
       <nav class="collapse navbar-collapse menu">
         <ul class="nav navbar-nav sf-menu">
           <li>
-            <a href=#>
-              主页
+
+
+            <%= link_to '主页','/','data-no-turbolink' => true %>
+
+          </li>
+
+          <li>
+            <a href=<%= news_index_path %> class="sf-with-ul">
+              新闻
 
             </a>
 
           </li>
+
           <li>
-            <a href="#" class="sf-with-ul">
+            <a href=<%= wenhuas_path %> class="sf-with-ul">
               企业文化
 
             </a>
 
           </li>
+
+
+
           <li>
-            <a href="#" class="sf-with-ul">
+            <a href=<%= products_path %> class="sf-with-ul">
               产品
 
             </a>
 
           </li>
           <li>
-            <a href="#" class="sf-with-ul">
+            <a href=<%= contacts_path %> class="sf-with-ul">
               联系我们
 
             </a>
