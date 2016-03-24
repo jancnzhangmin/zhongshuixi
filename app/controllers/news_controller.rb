@@ -18,6 +18,9 @@ class NewsController < ApplicationController
     @newss = Content.all
     @cla2 = Cla.find_by(keyword:"product")
     @products = @cla2.contents
+
+
+
   end
 
 

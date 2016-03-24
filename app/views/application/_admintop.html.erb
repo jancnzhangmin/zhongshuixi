@@ -2,37 +2,65 @@
 <header id="header">
   <!-- Header Top Bar Start -->
   <div class="top-bar">
+
     <div class="slidedown collapse">
+
       <div class="container">
+
+        <div class="logo pull-left">
+          <h1>
+
+
+            <%= image_tag public_config.logo.url,height:75%>
+
+          </h1>
+        </div>
+
+
+
+
+
+
+
+
         <div class="phone-email pull-right">
-          <a><i class="icon-phone"></i> 电话 : <%= public_config.tel %></a>
-          <a ><i class="icon-envelope"></i> Email : <%= public_config.mail %></a>
-          <a><i class="icon-comments"></i>QQ: <%= public_config.qq %></a>
+          <a><i class="icon-laptop"></i>电话:www.zhongshuixi.com</a>
+          <a><i class="icon-phone"></i>电话: <%= public_config.tel %></a>
+          <a ><i class="icon-envelope"></i>邮箱: <%= public_config.mail %></a>
+          <a><i class="icon-comments"></i>QQ:<%= public_config.qq %></a>
+          <a><i class="icon-map-marker"></i>地址:云南省玉溪市红塔区彩虹路27号彩虹新区8幢3号</a>
+
+
+
+
         </div>
 
       </div>
     </div>
   </div>
+
   <!-- Header Top Bar End -->
   <!-- Main Header Start -->
   <div class="main-header">
+
     <div class="container">
       <!-- TopNav Start -->
+
+
+
+
+
       <div class="topnav navbar-header">
+
         <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
+
+
           <i class="icon-angle-down icon-current"></i>
         </a>
       </div>
       <!-- TopNav End -->
       <!-- Logo Start -->
-      <div class="logo pull-left">
-        <h1>
 
-
-            <%= image_tag public_config.logo.url,height:60 %>
-
-        </h1>
-      </div>
       <!-- Logo End -->
       <!-- Mobile Menu Start -->
       <div class="mobile navbar-header">
@@ -75,14 +103,6 @@
 
             </ul>
           </li>
-
-
-
-
-
-
-
-
           <li>
             <a href=<%=  messages_path %> class="sf-with-ul">
               留言
@@ -90,6 +110,15 @@
             </a>
 
           </li>
+
+          <li>
+            <a href=<%=  sliders_path %> class="sf-with-ul">
+              主页图片
+
+            </a>
+
+          </li>
+
 
 
         </ul>

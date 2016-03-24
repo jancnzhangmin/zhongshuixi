@@ -15,7 +15,6 @@
         <div class="breadcrumbs pull-right">
           <ul>
             <li>你在这里:</li>
-            <li><a href="index-2.html">主页</a></li>
             <li><a href="#">新闻</a></li>
 
           </ul>
@@ -41,14 +40,16 @@
         <% @news.each do |new| %>
 
 
-        <article class="post hentry">
 
+
+
+        <article class="post hentry">
           <header class="post-header">
             <h3 class="content-title"> <%= link_to new.title,news_path(new) %></h3>
             <div class="blog-entry-meta">
               <div class="blog-entry-meta-date">
                 <i class="icon-time"></i>
-                <span class="blog-entry-meta-date-month"><%= new.created_at %></span>
+                <span class="blog-entry-meta-date-month"><%= new.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
 
               </div>
               <div class="blog-entry-meta-author">
@@ -79,13 +80,17 @@
 
         <div class="pagination-centered">
           <ul class="pagination">
+
             <li class="disabled"><a href="#">«</a></li>
             <li class="active"><a href="#">1</a></li>
+
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
             <li><a href="#">4</a></li>
             <li><a href="#">5</a></li>
             <li><a href="#">»</a></li>
+
+
           </ul>
         </div>
 
