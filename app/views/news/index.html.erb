@@ -78,24 +78,12 @@
 
 
 
-        <div class="pagination-centered">
-          <ul class="pagination">
+        <div >
 
-            <li class="disabled"><a href="#">«</a></li>
-            <li class="active"><a href="#">1</a></li>
-
-
-
-
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">»</a></li>
-
-
-          </ul>
+          <%= will_paginate @news, previous_label:'上一页', next_label: '下一页' %>
         </div>
+
+
 
 
       </div>

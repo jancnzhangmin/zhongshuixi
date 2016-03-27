@@ -5,15 +5,15 @@
 
     <div class="slidedown collapse">
 
-      <div class="container">
+      <div style="height:70px;">
 
         <div class="logo pull-left">
-          <h1>
+          <h2>
 
 
             <%= image_tag public_config.logo.url,height:75%>
 
-          </h1>
+          </h2>
         </div>
 
 
@@ -22,17 +22,25 @@
 
 
 
-
+        <div class="container">
         <div class="phone-email pull-right">
-          <a><i class="icon-laptop"></i>电话:www.zhongshuixi.com</a>
-          <a><i class="icon-phone"></i>电话: <%= public_config.tel %></a>
-          <a ><i class="icon-envelope"></i>邮箱: <%= public_config.mail %></a>
-          <a><i class="icon-comments"></i>QQ:<%= public_config.qq %></a>
-          <a><i class="icon-map-marker"></i>地址:云南省玉溪市红塔区彩虹路27号彩虹新区8幢3号</a>
 
 
 
+<table border="0">
 
+  <tr>
+    <td><a><i class="icon-laptop"></i>网址:   www.zhongshuixi.com</a></td> <td><a ><i class="icon-envelope"></i>邮箱: <%= public_config.mail %></a></td>
+  </tr>
+  <br>
+
+  <tr>
+    <td><a><i class="icon-phone"></i> 电话:    <%= public_config.tel %></a></td> <td><a><i class="icon-comments"></i>QQ:  <%= public_config.qq %></a></td>
+  </tr>
+
+
+</table>
+        </div>
         </div>
 
       </div>
@@ -43,40 +51,30 @@
   <!-- Main Header Start -->
   <div class="main-header">
 
-    <div class="container">
+    <div class="container" style="height:80px;">
       <!-- TopNav Start -->
 
 
 
 
 
-      <div class="topnav navbar-header">
-
-        <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
 
 
-          <i class="icon-angle-down icon-current"></i>
-        </a>
-      </div>
-      <!-- TopNav End -->
-      <!-- Logo Start -->
 
-      <!-- Logo End -->
-      <!-- Mobile Menu Start -->
-      <div class="mobile navbar-header">
-        <a class="navbar-toggle" data-toggle="collapse" href=".html">
-          <i class="icon-reorder icon-2x"></i>
-        </a>
-      </div>
       <!-- Mobile Menu End -->
       <!-- Menu Start -->
-      <nav class="collapse navbar-collapse menu">
+
+      <nav class="collapse navbar-collapse menu" >
+
         <ul class="nav navbar-nav sf-menu">
+
+
           <li>
             <a href=<%= admins_path %>>
               管理员
                            <span class="sf-sub-indicator">
                            <i class="icon-angle-down "></i>
+                             
                            </span>
             </a>
 
@@ -118,6 +116,11 @@
             </a>
 
           </li>
+
+
+
+
+
 
 
 

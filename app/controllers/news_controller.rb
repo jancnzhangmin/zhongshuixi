@@ -8,6 +8,11 @@ class NewsController < ApplicationController
     @cla2 = Cla.find_by(keyword:"product")
     @products = @cla2.contents
 
+
+
+    @news = New.all.order("updated_at DESC").paginate :page => params[:page], per_page:8
+
+
   end
 
 
