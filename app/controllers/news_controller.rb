@@ -4,13 +4,14 @@ class NewsController < ApplicationController
 
 
     @cla = Cla.find_by(keyword:"news")
-    @news = @cla.contents
+    @news = @cla.contents.order("updated_at DESC").paginate :page => params[:page], per_page:8
     @cla2 = Cla.find_by(keyword:"product")
     @products = @cla2.contents
 
 
 
-    @news = New.all.order("updated_at DESC").paginate :page => params[:page], per_page:8
+    #@news = Content.all.order("updated_at DESC").paginate :page => params[:page], per_page:8
+
 
 
   end
