@@ -1,4 +1,12 @@
 <!-- Header Start -->
+
+<% if session[:username] == nil %>
+    <script>
+      location.href='logins/new';
+
+    </script>
+    <% end %>
+
 <header id="header">
   <!-- Header Top Bar Start -->
   <div class="top-bar" style="max-height:98px;">
