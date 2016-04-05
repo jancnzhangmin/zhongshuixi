@@ -1,0 +1,65 @@
+<%= render 'top' %>
+<!-- Title, Breadcrumb Start-->
+<div class="breadcrumb-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+        <h2 class="title">站内导航</h2>
+      </div>
+      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+        <div class="breadcrumbs pull-right">
+          <ul>
+            <li>你在这里:</li>
+            <li><a href="#">站内导航</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Main Content start-->
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 sitemap">
+        <h3 class="title">导航</h3>
+        <ul>
+          <li>
+            <%= link_to '关于我们','/','data-no-turbolink' => true %>
+          </li>
+          <li>
+              <%= link_to '新闻中心',news_index_path %>
+            <ul>
+              <% @news.each do |new| %>
+                  <li><%= link_to new.title,news_path(new) %></li>
+              <% end %>
+            </ul>
+          </li>
+          <li>
+            <a href=<%= wenhuas_path %> class="sf-with-ul">
+              企业文化</a>
+          </li>
+          <li>
+            <a href=<%= products_path %> class="sf-with-ul">
+              产品中心</a>
+            <ul>
+              <% @products.each do |product| %>
+                  <li><%= link_to product.title, product_path(product) %> </li>
+              <%end%>
+            </ul>
+          </li>
+          <li>
+            <a href=<%= contacts_path %> class="sf-with-ul">
+              联系我们 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Main Content end-->
+<%= render 'footer' %>

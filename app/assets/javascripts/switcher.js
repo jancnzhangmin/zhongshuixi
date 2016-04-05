@@ -115,17 +115,7 @@ function updateFooterTop(color) {
 
 
 //Footer Top Color Change
-$(".footer-bottom").spectrum({
-    showInitial: true,
-	color: "#898989",
-	preferredFormat: "hex6",
-    showInput: true,
-	move: updateFooterBottom
-});
-//Changing the header color instantly
-function updateFooterBottom(color) {
-    $(".footer-bottom").css("background", color.toHexString());
-}
+
 
 
 
