@@ -5,113 +5,109 @@
 
     <div class="slidedown collapse">
 
-      <div style="height:70px;">
+      <div style="height:75px;">
         <div class="container">
-        <div class="logo pull-left">
-          <h2>
+          <div class="logo pull-left">
+            <h2>
 
 
-            <%= image_tag public_config.logo.url,height:70%>
+              <%= image_tag public_config.logo.url, height: 70 %>
 
-          </h2>
-        </div>
-
-
+            </h2>
+          </div>
 
 
+          <div class="container">
+
+            <div class="phone-email pull-right">
 
 
-
-        <div class="container">
-
-          <div class="phone-email pull-right">
-
-
-
-            <table border="0">
-              <tr>
-                <td><i class="icon-laptop"></i>网址:   www.zhongshuixi.com &nbsp; &nbsp; <i class="icon-phone"></i>电话: <%= public_config.tel %></td>
-              </tr>
+              <table border="0">
+                <tr>
+                  <td><i class="icon-laptop"></i>网址: www.zhongshuixi.com &nbsp; &nbsp;
+                    <i class="icon-phone"></i>电话: <%= public_config.tel %></td>
+                </tr>
 
 
-              <tr>
-                <td><i class="icon-envelope"></i>邮箱: <%= public_config.mail %>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="icon-comments"></i>QQ:  <%= public_config.qq %></td>
-              </tr>
+                <tr>
+                  <td>
+                    <i class="icon-envelope"></i>邮箱: <%= public_config.mail %>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="icon-comments"></i>QQ:  <%= public_config.qq %>
+                  </td>
+                </tr>
 
 
                 <td><i class="icon-map-marker">&nbsp; &nbsp;</i>地址:云南省玉溪市红塔区彩虹路27号彩虹新区8幢3号</td>
 
 
+              </table>
+              <br>
 
-
-
-          </table>
-            <br>
-
+            </div>
           </div>
+
         </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu End -->
+
+    <div class="main-header">
+
+
+      <div class="container">
+
+        <!-- Menu Start -->
+        <nav class="collapse navbar-collapse menu">
+          <ul class="nav navbar-nav">
+
+            <font size="4">
+              <li>
+                <%= link_to '关于我们', '/', 'data-no-turbolink' => true %>
+
+              </li>
+
+              <li>
+                <a href=<%= news_index_path %> class="sf-with-ul">
+                  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;新闻中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                </a>
+
+              </li>
+
+              <li>
+                <a href=<%= wenhuas_path %> class="sf-with-ul">
+                  企业文化&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                </a>
+
+              </li>
+
+
+              <li>
+                <a href=<%= products_path %> class="sf-with-ul">
+                  产品中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                </a>
+
+              </li>
+              <li>
+                <a href=<%= contacts_path %> class="sf-with-ul">
+                  联系我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                </a>
+
+              </li>
+            </font>
+
+          </ul>
+        </nav>
+        <!-- Menu End -->
 
       </div>
     </div>
-  </div>
-
-  <!-- Mobile Menu End -->
-
-  <div class="main-header">
-    <div class="container" >
-      <!-- Menu Start -->
-      <nav class="collapse navbar-collapse menu">
-        <ul class="nav navbar-nav">
-          <font size="4">
-          <li>
-            <%= link_to '关于我们','/','data-no-turbolink' => true %>
-
-          </li>
-
-          <li>
-            <a href=<%= news_index_path %> class="sf-with-ul">
-              &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;新闻中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            </a>
-
-          </li>
-
-          <li>
-            <a href=<%= wenhuas_path %> class="sf-with-ul">
-              企业文化&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-            </a>
-
-          </li>
-
-
-
-          <li>
-            <a href=<%= products_path %> class="sf-with-ul">
-              产品中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-            </a>
-
-          </li>
-          <li>
-            <a href=<%= contacts_path %> class="sf-with-ul">
-              联系我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-            </a>
-
-          </li>
-          </font>
-        </ul>
-      </nav>
-      <!-- Menu End -->
-    </div>
-  </div>
   </div>
   </div>
   <!-- Main Header End -->

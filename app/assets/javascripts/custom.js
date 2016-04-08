@@ -479,9 +479,7 @@ jQuery(document).ready(function () {
 /*	Sticky Menu
 /*----------------------------------------------------*/
 
-	jQuery(document).ready(function(){
-		jQuery(".main-header").sticky({topSpacing:0});
-	});
+
 
 
 
