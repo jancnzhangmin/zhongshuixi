@@ -5,19 +5,28 @@
     <div class="container">
       <div class="row">
         <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
-          <h3>关于我们</h3>
+          <%= link_to '关于我们', '/', class:'mylink', 'data-no-turbolink' => true %>
         </section>
         <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-two">
-          <h3>产品中心</h3>
+
+          <%= link_to '产品', products_path, class:'mylink', 'data-no-turbolink' => true %>
           <ul id="tweets">
           </ul>
         </section>
         <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-three">
-          <h3>联系我们</h3>
+
+          <%= link_to '联系我们', contacts_path, class:'mylink', 'data-no-turbolink' => true %>
         </section>
         <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-four">
-          <h3>新闻中心</h3>
+
+          <%= link_to '新闻中心', news_index_path, class:'mylink', 'data-no-turbolink' => true %>
           <ul id="flickrfeed" class="thumbs"></ul>
+        </section>
+
+      </div>
+      <div class="row">
+        <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
+          <%= link_to '友情链接', '/', class:'mylink', 'data-no-turbolink' => true %>
         </section>
 
       </div>
@@ -39,9 +48,26 @@
 </footer>
 
 
+<<<<<<< HEAD
+=======
+<div class="toolbar">
+  <a href="#" class="toolbar-item toolbar-item-weixin">
+    <span class="toolbar-layer"></span>
+  </a>
+  <a onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=189771333&o=www.zhongshuixi.com&q=7', '_blank', 'height=520, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" class="toolbar-item toolbar-item-feedback"></a>
+  <a href="###" class="toolbar-item toolbar-item-app">
+    <span class="toolbar-layer"></span>
+  </a>
+  <a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+</div>
+
+
+
+
+>>>>>>> 3239f1a61b78da158e3b9e0f365d9dce6d2f9895
 <!--右侧弹窗-->
 
-<a href="#" class="scrollup"><img  style="CURSOR: pointer" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=189771333&o=www.zhongshuixi.com&q=7', '_blank', 'height=520, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"  border="0" SRC=http://wpa.qq.com/pa?p=1:189771333:1 alt="欢迎访问中水系，请稍等"></a>
+
 
 
 

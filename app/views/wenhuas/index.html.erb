@@ -26,7 +26,9 @@
 <!-- Title, Breadcrumb End-->
 <div class="content">
   <div class="container">
+    <% if @content %>
     <%= @content.content.html_safe %>
+        <% end %>
   </div>
 </div>
 <%= render 'footer' %>

@@ -36,7 +36,9 @@
       <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
         <h3 class="title">关于我们</h3>
         <p>
+          <% if @contacts %>
          <%= @contacts.content.html_safe %>
+              <% end %>
         </p>
 
         <div class="divider"></div>
