@@ -1,0 +1,31 @@
+<%= render 'admintop' %>
+
+<div id="titlebar" class="titlebar-hautq cover">
+  <div class="container relative" >
+    <div id="titlebar-text" >
+      <h4 id="titlebar-title">网站建设</h4>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+
+  <table class="table table-striped table-bordered">
+    <tr>
+      <td>标题</td>
+      <td>操作</td>
+    </tr>
+    <% @mains.each do |f| %>
+        <tr>
+          <td><%= f.title %></td>
+          <td><%= link_to '编辑',edit_main_path(f) %>&nbsp;&nbsp;<%= link_to '删除', f, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+
+  </table>
+
+  <%= link_to '新建',new_main_path,class:'btn btn-primary pull-right' %>
+</div>
+

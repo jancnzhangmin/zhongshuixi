@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :messages
   resources :logins
   resources :sitemaps
+  resources :mains
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

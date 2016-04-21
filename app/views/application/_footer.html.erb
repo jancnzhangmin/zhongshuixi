@@ -1,61 +1,4 @@
 
-<footer id="footer">
-  <!-- Footer Top Start -->
-  <div class="footer-top">
-    <div class="container">
-      <div class="row">
-        <h3>
-        <section class="col-lg-2 col-md-3 col-xs-12 col-sm-3 footer-one">
-
-          <%= link_to '关于我们', '/', class:'mylink', 'data-no-turbolink' => true %>
-        </section>
-        <section class="col-lg-2 col-md-3 col-xs-12 col-sm-3 footer-two">
-
-          <%= link_to '产品中心', products_path, class:'mylink', 'data-no-turbolink' => true %>
-          <ul id="tweets">
-          </ul>
-        </section>
-        <section class="col-lg-2 col-md-3 col-xs-12 col-sm-3 footer-three">
-
-          <%= link_to '联系我们', contacts_path, class:'mylink', 'data-no-turbolink' => true %>
-        </section>
-        <section class="col-lg-2 col-md-3 col-xs-12 col-sm-3 footer-four">
-
-          <%= link_to '新闻中心', news_index_path, class:'mylink', 'data-no-turbolink' => true %>
-          <ul id="flickrfeed" class="thumbs">
-          </ul>
-        </section>
-
-        <section class="col-lg-2 col-md-3 col-xs-12 col-sm-3 footer-one">
-          <%= link_to '友情链接', '/', class:'mylink', 'data-no-turbolink' => true %>
-        </section>
-
-        <section class="col-lg-2 col-md-3 col-xs-12 col-sm-3 footer-one">
-          <%= link_to '站内导航', sitemaps_path, class:'mylink', 'data-no-turbolink' => true %>
-        </section>
-
-        </h3>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer Top End -->
-  <!-- Footer Bottom Start -->
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-12 col-md-6 col-xs-12 col-sm-6 text-center">Copyright &copy; 2016.cloudtimesoft All rights reserved.
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <i class="icon-map-marker"></i>地址:云南省玉溪市红塔区彩虹路27号彩虹新区8幢3号
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer Bottom End -->
-</footer>
 
 
 
@@ -77,5 +20,18 @@
 
 
 
+
+<div id="footer-bottom" class="">
+  <div class="container">
+    <div id="footer-texts" class="pull-left"><%= public_config.beian %></div>
+    <div id="footer-navigation" class="pull-right"><ul id="menu-footer-bottom-menu" class="clearfix unstyled-all"><li id="menu-item-319" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-319"></i>电话： <%= public_config.tel %>  </li><li class="ui--separator"> / </li>
+      <li id="menu-item-320" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-320"><%= link_to '给我们留言',contacts_path %> </li><li class="ui--separator"> / </li>
+
+    </ul></div>				</div>
+</div>
+
+
+
+</div>
 
 

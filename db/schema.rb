@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160323060547) do
+ActiveRecord::Schema.define(version: 20160421165513) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username",        limit: 255
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20160323060547) do
     t.integer  "status",          limit: 4
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+  end
+
+  create_table "bottoms", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.string   "bottom",     limit: 255
+    t.text     "introuduce", limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "clas", force: :cascade do |t|
@@ -85,6 +93,17 @@ ActiveRecord::Schema.define(version: 20160323060547) do
     t.integer  "cla_id",     limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "mains", force: :cascade do |t|
+    t.string   "title",                  limit: 255
+    t.string   "summary",                limit: 255
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.string   "mainimage_file_name",    limit: 255
+    t.string   "mainimage_content_type", limit: 255
+    t.integer  "mainimage_file_size",    limit: 4
+    t.datetime "mainimage_updated_at"
   end
 
   create_table "sliders", force: :cascade do |t|

@@ -1,18 +1,101 @@
-<div class="fullwidthbanner-container">
-  <div class="fullwidthbanner rslider">
-    <ul>
-      <!-- THE FIRST SLIDE -->
-      <%= public_slider.each do |slider| %>
-      <li data-delay="6000" data-masterspeed="300" data-transition="fade">
-        <div class="slotholder">
 
-          <%= image_tag slider.image.url %>
-        </div>
+
+
+
+
+
+<div id="rev_slider_9_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:#E9E9E9;padding:0px;margin-top:0px;margin-bottom:0px;max-height:400px;">
+  <div id="rev_slider_9_1" class="rev_slider fullwidthabanner" style="display:none;max-height:400px;height:400px;">
+    <ul>	<!-- SLIDE  -->
+      <%= public_slider.each do |slider| %>
+      <li data-transition="fade" data-slotamount="7" data-masterspeed="300" >
+        <!-- MAIN IMAGE -->
+        <img  data-lazyload=<%= slider.image.url %> data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+        <!-- LAYERS -->
 
       </li>
-          <% end %>
-
+      <% end %>
     </ul>
-  </div>
+
+    <div class="tp-bannertimer"></div>	</div>
 </div>
-<!-- Slider End-->
+
+
+
+
+<script type="text/javascript">
+
+    var tpj = jQuery;
+    tpj.noConflict();
+    var revapi9;
+
+    tpj(document).ready(function () {
+
+        if (tpj('#rev_slider_9_1').revolution == undefined)
+            revslider_showDoubleJqueryError('#rev_slider_9_1');
+        else
+            revapi9 = tpj('#rev_slider_9_1').show().revolution(
+                    {
+                        dottedOverlay: "none",
+                        delay: 9000,
+                        startwidth: 1170,
+                        startheight: 400,
+                        hideThumbs: 200,
+
+                        thumbWidth: 100,
+                        thumbHeight: 50,
+                        thumbAmount: 4,
+
+                        navigationType: "both",
+                        navigationArrows: "none",
+                        navigationStyle: "round",
+
+                        touchenabled: "on",
+                        onHoverStop: "on",
+
+                        navigationHAlign: "center",
+                        navigationVAlign: "bottom",
+                        navigationHOffset: 0,
+                        navigationVOffset: 20,
+
+                        soloArrowLeftHalign: "left",
+                        soloArrowLeftValign: "center",
+                        soloArrowLeftHOffset: 0,
+                        soloArrowLeftVOffset: 0,
+
+                        soloArrowRightHalign: "right",
+                        soloArrowRightValign: "center",
+                        soloArrowRightHOffset: 0,
+                        soloArrowRightVOffset: 0,
+
+                        shadow: 0,
+                        fullWidth: "on",
+                        fullScreen: "off",
+
+                        stopLoop: "off",
+                        stopAfterLoops: -1,
+                        stopAtSlide: -1,
+
+
+                        shuffle: "off",
+
+                        autoHeight: "off",
+                        forceFullWidth: "off",
+
+
+                        hideThumbsOnMobile: "off",
+                        hideBulletsOnMobile: "off",
+                        hideArrowsOnMobile: "off",
+                        hideThumbsUnderResolution: 0,
+
+                        hideSliderAtLimit: 0,
+                        hideCaptionAtLimit: 0,
+                        hideAllCaptionAtLilmit: 0,
+                        startWithSlide: 0,
+                        videoJsPath: "rs-plugin/videojs/",
+                        fullScreenOffsetContainer: ""
+                    });
+
+    }); //ready
+
+</script>

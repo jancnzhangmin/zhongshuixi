@@ -1,31 +1,30 @@
-<!-- Main Content start-->
-<div class="main-content">
-  <div class="container">
-    <div class="row">
 
-      <% @mains.each do |main| %>
-      <div class="col-lg-4 col-md-4 col-sm-4">
-        <div class="content-box big ch-item bottom-pad-small">
-          <div class="ch-info-wrap">
-            <div class="ch-info">
-              <div class="ch-info-front ch-img-1"><i class="<%= main .icon %>"></i></div>
-              <div class="ch-info-back">
-                <i class="icon-fullscreen"></i>
-              </div>
-            </div>
-          </div>
-          <div class="content-box-info">
-            <h3><%= main.title %></h3>
-            <p>
-              <%= main .summary %>
-            </p>
-            <a href=<%= news_path(main) %>>了解更多 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
-          </div>
-        </div>
-      </div>
-      <% end %>
 
-    </div>
+
+
+<!--中间部分-->
+<div id="page-content" class="no-sidebar-layout"><div class="container">
+  <div id="the-content" >
+  <div  class="ui--tabs ui--tabs-mega clearfix text-left" style="margin-top: -29px;  margin-bottom: 0px;">
+    <div class="ui--tabs-header ui--accent-gradient ui--accent-color fullwidth-container clearfix">
+      <div class="container">
+
+        <ul class="ui--tabs-titles clearfix unstyled">
+          <li class=""><h5></h5></li><li class="" ><h5>&nbsp;</h5></li></ul></div></div><div class="clearfix"></div><ul class="ui--tabs-contents text-left clearfix"><li class="hidden"> <div class="ui-row row">
+
+    <% @mains.each do |main| %>
+    <div   class="ui-column span3"><div  class="ui--icon-box position--top"><span class="ui--icon-box-icon ui--animation"><img class="ui--icon" src="images/applogo.png" alt="" data-at2x="" data-retina-auto="1"/></span><div  class="ui--icon-box-content ui--animation"><h4 class="ui--icon-box-title ui--animation text-center" data-fx="fx--no-effect"><span ><strong><%= main.title %></strong></span></h4><div  class="ui--animation ui--icon-box-text text-justify" data-fx="fx--no-effect"><p><font size="2"><%= main .summary %></font></p>
+    </div></div></div></div>
+        <% end %>
+
+
+
+
+
   </div>
-</div>
-<!-- Main Content end-->
+  </li></ul>
+
+  </div>
+      </div>
+    </div>
+    </div>
