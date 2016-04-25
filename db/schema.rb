@@ -22,14 +22,6 @@ ActiveRecord::Schema.define(version: 20160421165513) do
     t.datetime "updated_at",                  null: false
   end
 
-  create_table "bottoms", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.string   "bottom",     limit: 255
-    t.text     "introuduce", limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-  end
-
   create_table "clas", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.string   "keyword",    limit: 255
