@@ -2,19 +2,11 @@
 <div class="breadcrumb-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-        <h2 class="title">站内导航</h2>
-      </div>
-      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-        <div class="breadcrumbs pull-right">
-          <ul>
-            <li>你在这里:</li>
+      <br>
+      <% if @new %>
+          <%= @new.content.html_safe %>
+      <% end %>
 
-            <li><a href="#">站内导航</a></li>
-
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </div>

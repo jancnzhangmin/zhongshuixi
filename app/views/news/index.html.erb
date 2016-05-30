@@ -9,17 +9,9 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-        <h2 class="title">公司新闻</h2>
+        <h2 class="title">企业动态</h2>
       </div>
-      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-        <div class="breadcrumbs pull-right">
-          <ul>
-            <li>你在这里:</li>
-            <li><a href="#">新闻</a></li>
 
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -45,26 +37,16 @@
 
         <article class="post hentry">
           <header class="post-header">
-            <h3 class="content-title"> <%= link_to new.title,news_path(new) %></h3>
-            <div class="blog-entry-meta">
-              <div class="blog-entry-meta-date">
-                <i class="icon-time"></i>
-                <span class="blog-entry-meta-date-month"><%= new.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
-
-              </div>
-              <div class="blog-entry-meta-author">
-                <i class="icon-user"></i>
-                <span class="blog-entry-meta-author"><%= new.auther %></span>
-              </div>
+            <div class="col-md-8">
+               <%= link_to new.title,news_path(new) %>&nbsp;&nbsp;&nbsp;&nbsp;  <%= new.auther %> &nbsp;&nbsp; <i><%= new.created_at.strftime("%Y-%m-%d %H:%M:%S") %></i>
+            </div>
+            <div class="col-md-2 pull-right">
 
 
             </div>
+
           </header>
-          <div class="post-content">
 
-              <%= new.summary %>
-
-          </div>
         </article>
         <div class="blog-divider" style="height:1px;"></div>
 
@@ -78,10 +60,7 @@
 
 
 
-        <div >
 
-          <%= will_paginate @news, previous_label:'上一页', next_label: '下一页' %>
-        </div>
 
 
 
@@ -92,7 +71,7 @@
 
 
         <!-- Search Widget Start -->
-<%= render 'right' %>
+
         <!-- Search Widget End -->
         <!-- Tab Start -->
 
