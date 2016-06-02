@@ -14,115 +14,115 @@
               <%= form_for(@config,:html => {:multipart => true}) do |f| %>
 
 
-              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                <p class="pull-right">
+              <div class="col-md-4">
+
                   网站标题:
-                </p>
+
               </div>
-              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                <%= f.text_field :title ,class:"form-control" %>
+              <div class="col-md-8">
+                <%= f.text_field :title ,class:"wpcf7-form-control wpcf7-text",style:'width:800px;' %>
               </div>
 
-<br>
+
+
+
                   <br>
 
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <p class="pull-right">
+
                       电话:
-                    </p>
-                  </div>
+                    </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                    <%= f.text_field :tel,class:"form-control"  %>
+                    <%= f.text_field :tel,class:"form-control" ,style:'width:800px;' %>
                   </div>
 
-                  <br>
+
                   <br>
 
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <p class="pull-right">
+
                       邮箱:
-                    </p>
+
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                    <%= f.text_field :mail,class:"form-control"  %>
+                    <%= f.text_field :mail,class:"form-control",style:'width:800px;'  %>
                   </div>
 
 
 
 
-                  <br>
+
                   <br>
 
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <p class="pull-right">
+
                       地址:
-                    </p>
+
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                    <%= f.text_field :address,class:"form-control"  %>
+                    <%= f.text_field :address,class:"form-control",style:'width:800px;'  %>
                   </div>
 
-                  <br>
+
                   <br>
 
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <p class="pull-right">
+
                       备案:
-                    </p>
+
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                    <%= f.text_field :beian,class:"form-control"  %>
+                    <%= f.text_field :beian,class:"form-control" ,style:'width:800px;' %>
                   </div>
 
-                  <br>
+
                   <br>
 
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <p class="pull-right">
+
                       qq:
-                    </p>
+
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                    <%= f.text_field :qq,class:"form-control"  %>
+                    <%= f.text_field :qq,class:"form-control" ,style:'width:800px;' %>
                   </div>
 
-                  <br>
+
                   <br>
 
 
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <p class="pull-right">
+
                       底部标题:
-                    </p>
+
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                    <%= f.text_field :recenttitle,class:"form-control"  %>
+                    <%= f.text_field :recenttitle,class:"form-control" ,style:'width:800px;' %>
                   </div>
 
-                  <br>
                   <br>
 
 
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <p class="pull-right">
+
                       底部简介:
-                    </p>
+
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                    <%= f.text_field :recentsummary,class:"form-control"  %>
+                    <%= f.text_field :recentsummary,class:"form-control" ,style:'width:800px;' %>
                   </div>
 
-                  <br>
+
                   <br>
 
 
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <p class="pull-right">
+
                       网站logo:
-                    </p>
+
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                    <%= f.file_field :logo,class:"form-control"  %>
+                    <%= f.file_field :logo,class:"form-control" ,style:'width:800px;' %>
                   </div>
 
 
@@ -134,7 +134,7 @@
 
 
 
-                  <br>
+
                   <br>
 
                   <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
@@ -142,8 +142,8 @@
                     </p>
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-                    <div class="pull-right">
-                      <%= f.submit '确定',class:'btn-small btn-color btn-pad' %>
+                    <div >
+                      <%= f.submit '确定',class:'btn btn-primary wpcf7-submit' %>
 
                     </div>
                   </div>
