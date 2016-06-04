@@ -16,11 +16,68 @@
   </div>
 </div>
 <!-- Title, Breadcrumb End-->
+
+
+
+
 <div class="content">
   <div class="container">
-    <% if @content %>
-    <%= @content.content.html_safe %>
+    <div class="row">
+      <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
+
+
+
+
+
+        <% @news.each do |new| %>
+
+
+
+
+
+            <article class="post hentry">
+              <header class="post-header">
+                <div class="col-md-8">
+                  <%= link_to new.title,news_path(new) %>&nbsp;&nbsp;&nbsp;&nbsp;  <%= new.auther %> &nbsp;&nbsp; <i><%= new.created_at.strftime("%Y-%m-%d %H:%M:%S") %></i>
+                </div>
+                <div class="col-md-2 pull-right">
+
+
+                </div>
+
+              </header>
+
+            </article>
+            <div class="blog-divider" style="height:1px;"></div>
+
+
+
         <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+      <!-- Search Widget Start -->
+
+      <!-- Search Widget End -->
+      <!-- Tab Start -->
+
+
+    </div>
   </div>
 </div>
+<!-- Tab End -->
 <%= render 'footer' %>
