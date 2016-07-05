@@ -20,8 +20,7 @@ class NewsController < ApplicationController
 
 
     @new=Content.find(params[:id])
-
-
+     @news = Content.all
 
 
   end

@@ -12,6 +12,7 @@ class WenhuasController < ApplicationController
 
   def show
     @content = Content.find(params[:id])
+    @news = Content.all
   end
 
 end
