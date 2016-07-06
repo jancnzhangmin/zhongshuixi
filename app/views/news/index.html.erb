@@ -1,30 +1,39 @@
 <%= render 'top' %>
 <div class="container">
 
-  <div  id="section-cr4zq" class="fullwidth-container ui--section clearfix inner-shadow-2 section-cr4zq" style="margin-top: 30px;  margin-bottom: -9px;  padding-top: 40px;  padding-bottom: 0px;">
+  <div  id="section-cr4zq" class="fullwidth-container ui--section clearfix inner-shadow-2 section-cr4zq" style="margin-top: 0px;  margin-bottom: 0px;  padding-top: 40px;  padding-bottom: 0px;">
     <div class="ui--title ui--animation ui--title-bordered text-left"><div class="ui--title-holder"><h3 class="ui--title-text"><strong>企业动态</strong></h3><div class="ui--title-borders ui--title-border-left"></div><div class="ui--title-borders ui--title-border-right"></div></div></div>
     <div class="ui-row row">
       <% @news.each do |new| %>
-      <div   class="ui-column span4" >
-        <div class="ui--box-widget" >
-          <div  class="ui--content-box ui--box ui--content-item ui--animation ui-row" >
-            <div class="ui--content-box-header">
-              <div class="ui--content-box-media effect--slide-btt type--image-hover clearfix" style="padding-bottom: 56.25%;">
-                <a class="ui--content-box-link" href=<%= news_path(new) %>>
-                  <div class="ui--content-box-image-default"><%= image_tag new.image %>
+
+          <div   class="ui-column span4" >
+            <div class="ui--box-widget" >
+              <div  class="ui--content-box ui--box ui--content-item ui--animation ui-row" >
+                <div class="ui--content-box-header">
+                  <div class="ui--content-box-media effect--slide-btt type--image-hover clearfix" style="padding-bottom: 56.25%;">
+                    <a class="ui--content-box-link" href=<%= news_path(new) %>>
+                      <div class="ui--content-box-image-default">
+                        <%= image_tag new.image %>
+                      </div>
+                      <div class="ui--content-box-overlay">
+                        <div class="ui--content-box-overlay-image">
+                          <%= image_tag new.image %>
+                        </div>
+                      </div>
+                    </a>
                   </div>
-                  <div class="ui--content-box-overlay">
-                    <div class="ui--content-box-overlay-image"><%= image_tag new.image %>
+                  <a class="ui--content-box-link" href=<%= news_path(new) %>>
+                    <div class="ui--content-box-title ui--gradient ui--gradient-grey on--hover clearfix text-center">
+                      <h6 class="ui--content-box-title-text"><%= new.title %></h6>
+
+
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
+
               </div>
-
             </div>
-      </div>
-        </div>
-      </div>
-
+          </div>
 
 
       <% end %>

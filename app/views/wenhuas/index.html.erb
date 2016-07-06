@@ -1,7 +1,7 @@
 <%= render 'top' %>
 <div class="container">
 
-  <div  id="section-cr4zq" class="fullwidth-container ui--section clearfix inner-shadow-2 section-cr4zq" style="margin-top: 30px;  margin-bottom: -9px;  padding-top: 40px;  padding-bottom: 0px;">
+  <div  id="section-cr4zq" class="fullwidth-container ui--section clearfix inner-shadow-2 section-cr4zq" style="margin-top: 0px;  margin-bottom: 0px;  padding-top: 40px;  padding-bottom: 0px;">
     <div class="ui--title ui--animation ui--title-bordered text-left"><div class="ui--title-holder"><h3 class="ui--title-text"><strong>企业文化</strong></h3><div class="ui--title-borders ui--title-border-left"></div><div class="ui--title-borders ui--title-border-right"></div></div></div>
     <div class="ui-row row">
       <% @news.each do |new| %>
@@ -23,8 +23,8 @@
                 </a>
               </div>
               <a class="ui--content-box-link" href=<%= news_path(new) %>>
-                <div class="ui--content-box-title ui--gradient ui--gradient-grey on--hover clearfix text-center">
-                  <h5 class="ui--content-box-title-text"><%= @news.title %></h5>
+                <div class="ui--content-box-title ui--gradient ui--gradient-grey on--hover text-center">
+                  <h6 class="ui--content-box-title-text"><%= new.title %></h6>
 
 
                 </div>
@@ -36,7 +36,9 @@
       </div>
 
 
+
       <% end %>
+
     </div> </div>
 </div>
 
